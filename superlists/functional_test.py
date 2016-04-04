@@ -1,6 +1,7 @@
 from selenium import webdriver
 
 import unittest
+import time
 
 class NewVisitorTest(unittest.TestCase):  #1
 
@@ -14,7 +15,7 @@ class NewVisitorTest(unittest.TestCase):  #1
         # Edith has heard about a cool new online to-do app. She goes
         # to check out its homepage
         self.browser.get('http://localhost:8000')
-
+        time.sleep(5)
         # She notices the page title and header mention to-do lists
         self.assertIn('To-Do', self.browser.title)  #5
         self.fail('Finish the test!')  #6
